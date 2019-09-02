@@ -10,9 +10,9 @@ Make sure you at least have:
 - x1 IR Reciever
 - x1 IR Remote (Car MP3 or similar)
 - x1 LED
-- x2 SPDT Relay (JQC-3FF-S-Z or similar)
-- x4 TT Motor
-- Wires (short, medium and long)
+- x2 SPDT Relay (Preferably Keyes Relay)
+- x4 DC Motor (Preferably TT Motor)
+- Wires
 
 ## Contributing
 See [CONTRIBUTING.md](https://github.com/Yaapete/Huh-iOS/blob/master/CONTRIBUTING.md) for in-depth details.
