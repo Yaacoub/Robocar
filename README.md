@@ -1,5 +1,9 @@
 # Robocar
 
+For those seeking to make a remote-controlled car with only relays, this is the project for you, even though it's not the best method out there.
+
+![](https://raw.githubusercontent.com/Yaacoub/Robocar/master/Robocar/Robocar.png)
+
 ## Material
 
 Make sure you at least have:
