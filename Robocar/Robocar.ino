@@ -7,13 +7,13 @@
 
 
 
-// Digital Pins
+// Constants
 
-int irRecieverPin = 2;
-int redLedPin = 3;
-int relayPin1 = 6;
-int relayPin2 = 7;
-int builtinLedPin = 13;
+const int irRecieverPin = 2;
+const int ledBuiltinPin = 13;
+const int ledPin = 3;
+const int relay1Pin = 6;
+const int relay2Pin = 7;
 
 
 
@@ -30,14 +30,16 @@ decode_results results;
 
 
 
-// Functions
+// Default Functions
 
 void setup() {
+  
   irrecv.enableIRIn();
-  pinMode(redLedPin, OUTPUT);
-  pinMode(relayPin1, OUTPUT);
-  pinMode(relayPin2, OUTPUT);
-  pinMode(builtinLedPin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
+  pinMode(relay1Pin, OUTPUT);
+  pinMode(relay2Pin, OUTPUT);
+  pinMode(ledBuiltinPin, OUTPUT);
+  
 }
 
 void loop() {
@@ -47,56 +49,56 @@ void loop() {
 
       // PLAY/PAUSE
       case 0xFFC23D:
-        digitalWrite(redLedPin, HIGH);
+        digitalWrite(ledPin, HIGH);
         delay(10);
-        digitalWrite(redLedPin, LOW);
+        digitalWrite(ledPin, LOW);
         powerStatus = !powerStatus;
-        digitalWrite(builtinLedPin, powerStatus);
-        digitalWrite(relayPin1, LOW);
-        digitalWrite(relayPin2, LOW);
+        digitalWrite(ledBuiltinPin, powerStatus);
+        digitalWrite(relay1Pin, LOW);
+        digitalWrite(relay2Pin, LOW);
         break;
         
         // 2
         case 0xFF18E7:
           if (powerStatus == HIGH) {
-            digitalWrite(redLedPin, HIGH);
+            digitalWrite(ledPin, HIGH);
             delay(10);
-            digitalWrite(redLedPin, LOW);
-            digitalWrite(relayPin1, HIGH);
-            digitalWrite(relayPin2, HIGH);
+            digitalWrite(ledPin, LOW);
+            digitalWrite(relay1Pin, HIGH);
+            digitalWrite(relay2Pin, HIGH);
           }
           break;
 
       // 4
       case 0xFF10EF:
         if (powerStatus == HIGH) {
-          digitalWrite(redLedPin, HIGH);
+          digitalWrite(ledPin, HIGH);
           delay(10);
-          digitalWrite(redLedPin, LOW);
-          digitalWrite(relayPin1, HIGH);
-          digitalWrite(relayPin2, LOW);
+          digitalWrite(ledPin, LOW);
+          digitalWrite(relay1Pin, HIGH);
+          digitalWrite(relay2Pin, LOW);
         }
         break;
 
       // 5
       case 0xFF38C7:
         if (powerStatus == HIGH) {
-          digitalWrite(redLedPin, HIGH);
+          digitalWrite(ledPin, HIGH);
           delay(10);
-          digitalWrite(redLedPin, LOW);
-          digitalWrite(relayPin1, LOW);
-          digitalWrite(relayPin2, LOW);
+          digitalWrite(ledPin, LOW);
+          digitalWrite(relay1Pin, LOW);
+          digitalWrite(relay2Pin, LOW);
         }
         break;
 
       // 6
       case 0xFF5AA5:
         if (powerStatus == HIGH) {
-          digitalWrite(redLedPin, HIGH);
+          digitalWrite(ledPin, HIGH);
           delay(10);
-          digitalWrite(redLedPin, LOW);
-          digitalWrite(relayPin1, LOW);
-          digitalWrite(relayPin2, HIGH);
+          digitalWrite(ledPin, LOW);
+          digitalWrite(relay1Pin, LOW);
+          digitalWrite(relay2Pin, HIGH);
         }
         break;
       
