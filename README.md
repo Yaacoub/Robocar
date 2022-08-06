@@ -18,14 +18,6 @@ Make sure you at least have:
 - x4 DC Motor (Preferably TT Motor)
 - Wires
 
-## Contributing
-See [CONTRIBUTING.md](https://github.com/Yaapete/Huh-iOS/blob/master/CONTRIBUTING.md) for in-depth details.
-
-## Author
-
-- Peter Yaacoub - [Yaapete](https://github.com/Yaapete)
-
 ## More information
 
-- Visit my [website](http://rebrand.ly/yaacoub) for more information!
 - Check out the project on the list of [Contributor Covenant Adopters](https://www.contributor-covenant.org/adopters.html).
